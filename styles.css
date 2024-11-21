@@ -1,0 +1,168 @@
+/* Fondo animado de estrellas */
+body {
+    background: #171717;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background-image: linear-gradient(#051327, #000);
+    inset: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(17, 0, 255, 0.962);
+    /* Sombra morado neón */
+    border: 3px solid rgba(17, 0, 255, 0.962);
+    /* Borde morado neón */
+    text-align: center;
+    display: inline-block;
+    /* Se ajusta al contenido */
+    margin: 0 auto;
+    /* Centrado horizontal */
+    min-width: 300px;
+    /* Tamaño mínimo opcional */
+    max-width: 90%;
+    /* Evita que se desborde en pantallas pequeñas */
+    z-index: 2;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+    box-shadow: 0 0 30px rgba(128, 0, 255, 1);
+    /* Sombra más fuerte al pasar el mouse */
+}
+
+.login-box h1 {
+    color: #ffffff;
+    /* Cambia aquí el color */
+    font-size: 24px;
+    /* Tamaño del texto */
+    margin: 10px 0;
+    /* Espaciado superior e inferior */
+}
+
+input[type="password"] {
+    width: 50%;
+    /* Hace que el campo ocupe todo el ancho del cuadro */
+    padding: 10px;
+    /* Espaciado interno */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    /* Borde morado neón */
+    border-radius: 5px;
+    /* Esquinas redondeadas */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo blanco semitransparente */
+    color: white;
+    /* Color del texto */
+    font-size: 16px;
+    /* Tamaño del texto */
+    transition: border-color 0.3s ease;
+    /* Efecto al pasar el mouse */
+}
+
+input[type="password"]:focus {
+    border-color: rgba(blue);
+    /* Cambio de color al enfocar */
+    outline: none;
+    /* Elimina el contorno por defecto */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #06d6a0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #04a17b;
+}
+
+.error {
+    border-color: rgb(255, 255, 255);
+}
+
+.hidden {
+    display: none;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+/* Estrellas */
+.space {
+    --size: 2px;
+    --space-layer:
+        4vw 50vh 0 #fff,
+        18vw 88vh 0 #fff,
+        73vw 14vh 0 #fff;
+
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    box-shadow: var(--space-layer);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+}
+
+.space-1 {
+    animation: move-1 25s linear infinite;
+}
+
+.space-2 {
+    animation: move-2 20s linear infinite;
+}
+
+.space-3 {
+    animation: move-3 15s linear infinite;
+}
+
+@keyframes move-1 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes move-2 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes move-3 {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
